@@ -18,7 +18,7 @@ int main()
     }
     else if(D == 0){
         int x = (-b)/(2*a);
-        printf("One roots: %d", x); 
+        printf("One root: %d", x); 
     }
     else{
         printf("No roots"); 

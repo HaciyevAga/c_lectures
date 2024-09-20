@@ -1,24 +1,18 @@
 #include<stdio.h>
 #include<math.h>
 
-/*
- *
- * ISHLE
-    */
-
-
-
 int main()
 {
-    long long n, start, finish;
-    long long t = 0;
+    long long n, ans;
     scanf("%lld", &n);
-    start = pow(10, n -1); 
-    finish = pow(10, n) -1;
-    for(int i = start; i <= finish;i++){
-        if(i % 2 == 1){
-            t += 1;
-        }
+
+    if(n == 1){
+        ans = 5;
     }
-    printf("%lld", t);
+    else{
+        ans = 9 * 5 * pow(10, n-2);
+    }
+    printf("%lld", ans);
+
+    return 0;
 }
