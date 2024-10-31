@@ -1,17 +1,20 @@
 #include <stdio.h>
 
-int main()
+int main() 
 {
     int n, f1, f2;
-    scanf("%d", &n);
-    int fd = n%10;
-    int sd = (n/10)%10;
-    int td = n/100;
+    //scanf("%d", &n);
+    n = 123;
+    int c = n%10;
+    int b = (n/10)%10;
+    int a = n/100;
 
-    if (td < sd && td < fd) f1 = td;
-    else if (sd < fd && sd < td) f1 = sd;
-    else f1 = td; 
-    
+    if (a < b && a < c) f1 = a;
+    else if (b < a && b < c) f1 = b;
 
+    if (f1 == a && b > c) f2 = c;
+    if (f1 == b && a > c) f2 = c;
+    if (f1 == c && a > b) f2 = b;
 
+    printf("%d%d", f1, f2);
 }
